@@ -1,0 +1,6 @@
+#!/bin/bash
+wordToSearch='google'
+cat /home/admin1/Videos/TerminalCommands/linux-content/access.log | awk '{print $15}' | sort -nr | grep -c -i "${wordToSearch}"
+
+
+

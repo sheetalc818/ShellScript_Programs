@@ -1,0 +1,12 @@
+#!/bash/bin
+
+for file in `ls *.log.1`
+	do
+	fileName=`echo $file |  aw'{print}'`;
+	#print list of files to rename
+	now=$(date +"%m %d %y")
+	echo "`$file | awk -F . '{print $1}'` $now"
+	#segregate basename and extension of file
+	#print Date commands to show in ddmmyy
+	#append date to the log file name
+done
