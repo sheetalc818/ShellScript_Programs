@@ -2,20 +2,30 @@
 echo "How many numbers you want to print: "
 read num
 x=1
-
+#x=$(($x*10))
 for (( i=0; i < $num; i++ ))
-do 
+do
 		x=$(($x*10))
-			case $x in
-				1)	echo "UNIT" ;;
-				10) echo "TEN" ;;
-				100) echo "HUNDRED" ;;
-				1000) echo "THOUSAND" ;;
-				10000) echo "TEN THOUSAND" ;;
-				100000) echo "LAKH" ;;
-				*) echo "Add value in case" 
-					break ;;
-		   esac
+
+		if [ $x -eq 1 ]
+		then
+				echo "UNIT"
+		elif [ $x -eq 10 ]
+		then
+				echo "TEN"
+		elif [ $x -eq 100 ]
+		then
+				echo "HUNDRED"
+		elif [ $x -eq 1000 ]
+		then
+				echo "THOUSAND"
+		elif [ $x -eq 10000 ]
+		then
+				echo "TEN THOUSAND"
+		elif [ $x -eq 100000 ]
+		then
+				echo "LAKH"
+	   fi
 done
 
 

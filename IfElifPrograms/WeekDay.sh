@@ -1,17 +1,29 @@
 #!/bin/bash -x
 #Read a Number and Display the week day (Sunday, Monday,...)
-
 function getDay()
 {
-	case $1 in 
-				0) echo "SUNDAY" ;;
-				1) echo "MONDAY" ;;
-				2)	echo "TUESDAY" ;;
-				3) echo "WEDNESDAY" ;;
-				4) echo "THURSDAY" ;;
-				5) echo "FRIDAY" ;;
-				6) echo "SATURDAY" ;;
-	esac
+	if [ $1 -eq 0 ]
+	then
+		echo "SUNDAY"
+	elif [ $1 -eq 1 ]
+	then
+		echo "MONDAY"
+	elif [ $1 -eq 2 ]
+	then
+		echo "TUESDAY"
+	elif [ $1 -eq 3 ]
+	then 
+		echo "WEDNESDAY"
+	elif [ $1 -eq 4 ]
+	then
+		echo "THURSDAY"
+	elif [ $1 -eq 5 ]
+	then
+		echo "FRIDAY"
+	elif [ $1 -eq 6 ]
+	then
+		echo "SATURDAY"
+	fi
 }
 getDay $((RANDOM%6))
 

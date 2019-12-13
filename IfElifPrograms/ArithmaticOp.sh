@@ -49,6 +49,9 @@ function getMinMax()
    fi
 }
 
+#Calling the getMinMax() function
 getMinMax $exp1 $exp2 $exp3 $exp4
+
+#Printing Min and Max value
 echo "Mininum value is: " $MIN
 echo "Maximum value is: " $MAX
