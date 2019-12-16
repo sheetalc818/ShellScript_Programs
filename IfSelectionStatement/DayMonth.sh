@@ -7,7 +7,7 @@ read month
 
 function checkDate()
 {
-	if [[ $1 -ge 3 && $2 -ge 20 && $1 -le 6 && $2 -le 20 ]]
+	if [[ $1 -eq 3 && $2 -ge 20 && $1 -eq 6 && $2 -le 20 ]]
 	then
 		echo "true";
 	else
