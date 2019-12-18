@@ -7,6 +7,16 @@ HIGH=100
 #Asking user to think number
 echo "Think number n in between 1 to 100:"
 
+#function optionCase()
+#{
+#   printf "Press 1 if Number is $mid"
+# 	 printf "Press 2 if Number is less than $mid"
+#	 printf "Press 3 if Number is greater than $mid"
+#	 read num
+#	 local myresult=$num
+#	 echo $myresult
+#}
+
 #getNumber() function
 function getNumber()
 {
@@ -14,34 +24,32 @@ function getNumber()
 	mid=$(( ($LOW+$HIGH)/2 ))
 	echo $mid
 
+	printf "Press 1 if Number is $mid"
+  	printf "Press 2 if Number is less than $mid"
+   printf "Press 3 if Number is greater than $mid"
+	read number
+
 	#Calling optionCase() function
-	number=$(optionCase)
+	#number=$(optionCase)
+	#echo "-----"$number
 
-	while [ $LOW -ne $HIGH ]
-	do
-			if [[ $number -eq 1 ]]
-			then
-				echo "You have found number $mid"
-			elif [[ $number -eq 2 ]]
-			then
-				last=$mid
-				getNumber $LOW $last
-			elif [[ $number -eq 3 ]]
-			then
-				first=$mid
-				getNumber $first $last
-			else
-				exit
-			fi
-	done
+	case $number in
+		1)
+			echo "You have found number $mid"
+			;;
+		2)
+			HIGH=$mid
+			getNumber $LOW $HIGH
+			;;
+		3)
+			LOW=$mid
+			getNumber $LOW $HIGH
+			;;
+		*)
+			exit
+			;;
+	esac
 }
 
-function optionCase()
-{
-	echo "Press 1 if Number is $mid"
-   echo "Press 2 if Number is less than $mid"
-   echo "Press 3 if Number is greater than $mid"
-   read number
-}
-
+#Calling a getNumber() function
 getNumber $LOW $HIGH
