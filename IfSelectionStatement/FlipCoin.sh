@@ -3,6 +3,7 @@
 Head=0;
 Tail=0;
 
+#Checking for Head and Tail
 function getFlip()
 {
 	if [ $1 -eq 1 ]
@@ -13,5 +14,6 @@ function getFlip()
 	fi
 }
 
-getFlip $(($(($RANDOM%10))%2))
+#Calling getFlip() function
+getFlip $(($RANDOM%2))
 

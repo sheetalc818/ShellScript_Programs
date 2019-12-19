@@ -1,8 +1,9 @@
 #!/bin/bash -x
 
 GOAL=200
+STAKE=100
 
-read -p "Enter stake(money) value: " stake
+#read -p "Enter stake(money) value: " stake
 read -p "Enter trials: " trials
 
 function getPercentage()
@@ -22,8 +23,7 @@ function calculateWin()
 	#cash=0
 	for (( t=1; t<=trials; t++ ))
 	do
-		local cash=$stake
-
+		local cash=$STAKE
 		while [ $cash -gt 0 -a $cash -lt $GOAL ]
 		do
 			((bet++))
