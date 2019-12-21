@@ -7,6 +7,7 @@ read N
 #Function getPrimeFactor()
 function getPrimeFactor()
 {
+	#local N=$1
 	for (( i=2; i*i<$N; i++ ))
 	do
 		#While i divides n, print i and divide n
