@@ -5,7 +5,7 @@ MAXCOUNT=10
 count=1
 
 declare -A num
-
+#Genrating random array
 function randomArray()
 {
 	#Storing random numbers in Array
@@ -65,8 +65,10 @@ function findSecondSmallest()
 	done
 	echo "secondMinimum=$second_min"
 }
-
+#Calling Function
 randomArray $MAXCOUNT $count
 num=$(randomArray)
+#Displaying 2nd Gretest no
 findSecondGretest "${num[@]}"
+#Displaying 2nd lowest no
 findSecondSmallest "${num[@]}"
