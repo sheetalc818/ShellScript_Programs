@@ -30,11 +30,13 @@ do
 done
 
 #Storing the result in a dictionary and Printing it
+#Finding the Min Occurance of the number
 for (( i=1; i<=$((${#number[@]})); i++ ))
 do
    echo ${number[$i]}
 done | sort -n -k1 | head -1
 
+#Finding the Max occurance of the number
 for (( i=1; i<=$((${#number[@]})); i++ ))
 do
    #echo "Key: $i Value : ${number[$i]}"
