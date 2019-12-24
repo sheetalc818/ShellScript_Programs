@@ -32,13 +32,13 @@ done
 #Storing the result in a dictionary and Printing it
 for (( i=1; i<=$((${#number[@]})); i++ ))
 do
-   echo ${number[$i]}
-done | sort -n -k1 | head -1
+    echo "$i : ${number[$i]}"
+done | sort -n -k2 | head -1
 
 for (( i=1; i<=$((${#number[@]})); i++ ))
 do
    #echo "Key: $i Value : ${number[$i]}"
-   echo ${number[$i]}
-done | sort -n -k1 | tail -1
+    echo "$i : ${number[$i]}"
+done | sort -n -k2 | tail -1
 
 
