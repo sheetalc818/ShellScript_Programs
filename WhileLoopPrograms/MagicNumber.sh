@@ -7,16 +7,6 @@ HIGH=100
 #Asking user to think number
 echo "Think number n in between 1 to 100:"
 
-#function optionCase()
-#{
-#   printf "Press 1 if Number is $mid"
-# 	 printf "Press 2 if Number is less than $mid"
-#	 printf "Press 3 if Number is greater than $mid"
-#	 read num
-#	 local myresult=$num
-#	 echo $myresult
-#}
-
 #getNumber() function
 function getNumber()
 {
@@ -26,12 +16,10 @@ function getNumber()
 
 	printf "Press 1 if Number is $mid"
   	printf "Press 2 if Number is less than $mid"
-   printf "Press 3 if Number is greater than $mid"
+        printf "Press 3 if Number is greater than $mid"
 	read number
 
-	#Calling optionCase() function
-	#number=$(optionCase)
-	#echo "-----"$number
+	#Calling optionCase() functin
 
 	case $number in
 		1)
