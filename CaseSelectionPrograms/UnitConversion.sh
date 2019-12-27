@@ -4,7 +4,7 @@
 #2. Feet to Meter 4. Meter to Feet
 
 #Variable
-CHOICE=0
+choice=0
 
 #Menu
 echo "-------Menu------"
@@ -15,7 +15,7 @@ echo "4. Meter to Feet"
 
 #Accepting input from the user
 echo "Select the Option to perform the option:"
-read CHOICE
+read choice
 
 function getFeetToInch(){
 	echo "Enter the length in feet:"
@@ -46,7 +46,7 @@ function getMeterToFeet(){
 }
 
 #Case
-case $CHOICE in
+case $choice in
 	1) getFeetToInch ;;
 	2) getFeetToMeter ;;
 	3) getInchToFeet ;;
